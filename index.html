@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- TROQUE: título e descrição (aparecem no Google) -->
+<title>Barbearia Exemplo | Corte e Barba em Ribeirão Preto</title>
+<meta name="description" content="Barbearia Exemplo: cortes, barba e muito estilo. Agende pelo WhatsApp.">
+<style>
+  :root{
+    /* TROQUE AS CORES PARA COMBINAR COM O CLIENTE */
+    --cor-principal:#c8963e;
+    --cor-fundo:#111214;
+    --cor-card:#1b1d20;
+    --cor-texto:#f2f2f2;
+    --cor-suave:#a8abb0;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--cor-fundo);color:var(--cor-texto);line-height:1.6}
+  a{color:inherit;text-decoration:none}
+  .container{max-width:1000px;margin:0 auto;padding:0 20px}
+  header{position:sticky;top:0;background:rgba(17,18,20,.95);backdrop-filter:blur(6px);z-index:10;border-bottom:1px solid #2a2c30}
+  .nav{display:flex;justify-content:space-between;align-items:center;height:64px}
+  .logo{font-weight:800;font-size:1.2rem;color:var(--cor-principal);letter-spacing:1px}
+  .menu{display:flex;gap:20px;font-size:.95rem}
+  .menu a:hover{color:var(--cor-principal)}
+  .btn{display:inline-block;background:var(--cor-principal);color:#111;font-weight:700;padding:14px 28px;border-radius:8px;transition:transform .15s}
+  .btn:hover{transform:translateY(-2px)}
+  .hero{padding:90px 0 80px;text-align:center;background:radial-gradient(circle at 50% 0%,#2a2214 0%,var(--cor-fundo) 65%)}
+  .hero h1{font-size:clamp(2rem,6vw,3.4rem);line-height:1.15;margin-bottom:16px}
+  .hero h1 span{color:var(--cor-principal)}
+  .hero p{color:var(--cor-suave);max-width:520px;margin:0 auto 30px;font-size:1.1rem}
+  section{padding:70px 0}
+  h2{font-size:1.9rem;margin-bottom:8px;text-align:center}
+  .sub{color:var(--cor-suave);text-align:center;margin-bottom:40px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
+  .card{background:var(--cor-card);border:1px solid #2a2c30;border-radius:12px;padding:26px}
+  .card h3{margin-bottom:6px}
+  .card .preco{color:var(--cor-principal);font-weight:800;font-size:1.3rem;margin-top:10px}
+  .card p{color:var(--cor-suave);font-size:.95rem}
+  .galeria{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+  /* TROQUE: para usar fotos reais, coloque <img src="foto1.jpg" alt="Corte"> dentro de cada .foto */
+  .foto{aspect-ratio:1;border-radius:12px;background:linear-gradient(135deg,#2a2c30,#1b1d20);display:flex;align-items:center;justify-content:center;color:var(--cor-suave);font-size:.9rem;overflow:hidden}
+  .foto img{width:100%;height:100%;object-fit:cover}
+  .depoimento{font-style:italic}
+  .depoimento strong{display:block;margin-top:12px;font-style:normal;color:var(--cor-principal)}
+  .info{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:30px}
+  .info ul{list-style:none}
+  .info li{display:flex;justify-content:space-between;border-bottom:1px solid #2a2c30;padding:8px 0;color:var(--cor-suave)}
+  .info li span:last-child{color:var(--cor-texto)}
+  .mapa iframe{width:100%;height:280px;border:0;border-radius:12px}
+  footer{text-align:center;padding:30px 20px;color:var(--cor-suave);border-top:1px solid #2a2c30;font-size:.9rem}
+  .whats{position:fixed;right:18px;bottom:18px;background:#25d366;color:#fff;font-weight:700;padding:14px 20px;border-radius:50px;box-shadow:0 4px 14px rgba(0,0,0,.4);z-index:20}
+  @media(max-width:640px){.menu{display:none}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <!-- TROQUE: nome do negócio -->
+    <div class="logo">BARBEARIA EXEMPLO</div>
+    <nav class="menu">
+      <a href="#servicos">Serviços</a>
+      <a href="#galeria">Galeria</a>
+      <a href="#depoimentos">Clientes</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="container">
+      <!-- TROQUE: frase principal e texto -->
+      <h1>Seu estilo, <span>do jeito certo.</span></h1>
+      <p>Corte, barba e atendimento de qualidade. Agende seu horário em segundos pelo WhatsApp.</p>
+      <!-- TROQUE o número: 55 + DDD + número, só dígitos. Ex.: 5516999999999 -->
+      <a class="btn" href="https://wa.me/5516999999999?text=Ol%C3%A1!%20Vi%20o%20site%20e%20quero%20agendar%20um%20hor%C3%A1rio." target="_blank" rel="noopener">Agendar no WhatsApp</a>
+    </div>
+  </section>
+
+  <section id="servicos">
+    <div class="container">
+      <h2>Nossos serviços</h2>
+      <p class="sub">Preços justos, acabamento impecável.</p>
+      <!-- TROQUE: serviços e preços -->
+      <div class="grid">
+        <div class="card"><h3>Corte masculino</h3><p>Tesoura ou máquina, do clássico ao moderno.</p><div class="preco">R$ 40</div></div>
+        <div class="card"><h3>Barba</h3><p>Toalha quente, navalha e hidratação.</p><div class="preco">R$ 30</div></div>
+        <div class="card"><h3>Corte + Barba</h3><p>O combo completo com desconto.</p><div class="preco">R$ 60</div></div>
+        <div class="card"><h3>Sobrancelha</h3><p>Design na navalha ou pinça.</p><div class="preco">R$ 15</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="galeria">
+    <div class="container">
+      <h2>Nosso trabalho</h2>
+      <p class="sub">Alguns dos resultados.</p>
+      <!-- TROQUE: substitua o texto por <img src="foto1.jpg" alt="Descrição"> -->
+      <div class="galeria">
+        <div class="foto">Foto 1</div>
+        <div class="foto">Foto 2</div>
+        <div class="foto">Foto 3</div>
+        <div class="foto">Foto 4</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="depoimentos">
+    <div class="container">
+      <h2>O que dizem os clientes</h2>
+      <p class="sub">Use depoimentos reais (peça autorização).</p>
+      <!-- TROQUE: por depoimentos verdadeiros do cliente -->
+      <div class="grid">
+        <div class="card depoimento">“Melhor corte que já fiz, atendimento nota 10.”<strong>Nome do cliente</strong></div>
+        <div class="card depoimento">“Ambiente ótimo e horário sempre respeitado.”<strong>Nome do cliente</strong></div>
+        <div class="card depoimento">“Agendei pelo WhatsApp e foi super rápido.”<strong>Nome do cliente</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contato">
+    <div class="container">
+      <h2>Venha nos visitar</h2>
+      <p class="sub">Agende ou apareça, será um prazer atender você.</p>
+      <div class="info">
+        <div>
+          <h3 style="margin-bottom:10px">Horários</h3>
+          <!-- TROQUE: horários -->
+          <ul>
+            <li><span>Seg a Sex</span><span>09h às 19h</span></li>
+            <li><span>Sábado</span><span>09h às 17h</span></li>
+            <li><span>Domingo</span><span>Fechado</span></li>
+          </ul>
+          <!-- TROQUE: endereço e redes -->
+          <p style="margin-top:18px;color:var(--cor-suave)">📍 Rua Exemplo, 123 - Centro<br>📱 (16) 99999-9999<br>📷 <a href="https://instagram.com/" target="_blank" rel="noopener" style="color:var(--cor-principal)">@barbeariaexemplo</a></p>
+        </div>
+        <!-- TROQUE: no Google Maps, clique em Compartilhar > Incorporar um mapa > copie o src do iframe -->
+        <div class="mapa">
+          <iframe src="https://www.google.com/maps?q=Ribeir%C3%A3o+Preto+SP&output=embed" loading="lazy" title="Mapa"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>© 2026 Barbearia Exemplo. Todos os direitos reservados.</p>
+  <!-- TROQUE: seu contato (assim novos clientes te encontram) -->
+  <p style="margin-top:6px">Site criado por [Seu Nome] • WhatsApp dos seus pais/seu contato combinado</p>
+</footer>
+
+<a class="whats" href="https://wa.me/5516999999999?text=Ol%C3%A1!%20Vi%20o%20site%20e%20quero%20agendar%20um%20hor%C3%A1rio." target="_blank" rel="noopener">💬 WhatsApp</a>
+
+</body>
+</html>
